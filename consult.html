@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Хочу консультацию — Виртуальный кабинет математики</title>
+  <style>
+    :root { --bg:#f7fbff; --card:#fff; --primary:#1f5fbf; --primary-700:#184b95; --text:#1b2a3a; --muted:#5b6b7a; --border:#e1e8f0; --accent:#0ea5e9; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:var(--bg); color:var(--text); font-family: "Segoe UI", Roboto, Arial, sans-serif; }
+    header { background: linear-gradient(90deg, var(--primary), var(--accent)); color:#fff; padding:14px 24px; position: sticky; top:0; z-index:10; }
+    .brand h1 { margin:0; font-size:18px; }
+    .brand p { margin:0; font-size:13px; opacity:0.9; }
+    nav { margin-top:10px; display:flex; flex-wrap:wrap; gap:8px; }
+    .nav-link { padding:8px 12px; border-radius:8px; border:1px solid rgba(255,255,255,0.25); background: rgba(255,255,255,0.18); color:#fff; font-weight:600; }
+    main { max-width:768px; margin:24px auto; padding:0 16px; }
+    h2 { color:var(--primary-700); }
+    .card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:16px; }
+    label { display:block; margin:10px 0 4px; font-weight:600; color:var(--text); }
+    input, textarea, select {
+      width:100%; padding:10px; border-radius:8px; border:1px solid var(--border); background:#fff; color:var(--text);
+    }
+    .row { display:grid; grid-template-columns: 1fr 1fr; gap:12px; }
+    .btn { margin-top:12px; padding:10px 14px; border-radius:10px; border:1px solid var(--primary); background:#fff; color:var(--primary); font-weight:700; cursor:pointer; }
+    .btn:hover { background:#f0f7ff; }
+    .note { color:var(--muted); font-size:14px; }
+    @media (max-width:640px) { .row { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <h1>Виртуальный кабинет математики</h1>
+      <p>Средняя школа №7 г. Слонима</p>
+    </div>
+    <nav>
+      <a class="nav-link" href="index.html">Главная</a>
+      <a class="nav-link" href="news.html">Лента новостей</a>
+      <a class="nav-link" href="students.html">Учащимся</a>
+      <a class="nav-link" href="teacher.html">Учителю</a>
+      <a class="nav-link" href="consult.html">Хочу консультацию</a>
+      <a class="nav-link" href="guestbook.html">Гостевая книга</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Хочу консультацию</h2>
+    <p class="note">Заполните форму — мы свяжемся с вами. При желании, можно заменить отправку на Google Формы.</p>
+
+    <!-- Форма обратной связи (по умолчанию mailto, можно настроить серверный обработчик) -->
+    <section class="card" aria-label="Форма консультации">
+      <!-- ПРИМЕР: замените адрес в action на ваш обработчик или Google Form -->
+      <form action="mailto:example@school.by" method="post" enctype="text/plain">
+        <div class="row">
+          <div>
+            <label for="name">Ваше имя</label>
+            <input id="name" name="name" type="text" required />
+          </div>
+          <div>
+            <label for="grade">Класс</label>
+            <select id="grade" name="grade" required>
+              <option value="">Выберите класс</option>
+              <option>5</option><option>6</option><option>7</option><option>8</option>
+              <option>9</option><option>10</option><option>11</option>
+            </select>
+          </div>
+        </div>
+
+        <label for="topic">Тема вопроса</label>
+        <input id="topic" name="topic" type="text" placeholder="Например: подготовка к олимпиаде" required />
+
+        <label for="message">Ваш вопрос</label>
+        <textarea id="message" name="message" rows="6" placeholder="Опишите подробности" required></textarea>
+
+        <button class="btn" type="submit">Отправить заявку</button>
+      </form>
+    </section>
+  </main>
+
+  <footer style="text-align:center; color:#5b6b7a; padding:14px 16px;">
+    © Средняя школа №7 г. Слонима • «Консультация»
+  </footer>
+</body>
+</html>

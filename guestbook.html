@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Гостевая книга — Виртуальный кабинет математики</title>
+  <style>
+    :root { --bg:#f7fbff; --card:#fff; --primary:#1f5fbf; --primary-700:#184b95; --text:#1b2a3a; --muted:#5b6b7a; --border:#e1e8f0; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:var(--bg); color:var(--text); font-family: "Segoe UI", Roboto, Arial, sans-serif; }
+    header { background: linear-gradient(90deg, var(--primary), #0ea5e9); color:#fff; padding:14px 24px; position: sticky; top:0; z-index:10; }
+    .brand h1 { margin:0; font-size:18px; }
+    .brand p { margin:0; font-size:13px; opacity:0.9; }
+    nav { margin-top:10px; display:flex; flex-wrap:wrap; gap:8px; }
+    .nav-link { padding:8px 12px; border-radius:8px; border:1px solid rgba(255,255,255,0.25); background: rgba(255,255,255,0.18); color:#fff; font-weight:600; }
+    main { max-width:768px; margin:24px auto; padding:0 16px; }
+    h2 { color:var(--primary-700); }
+    .card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:16px; }
+    label { display:block; margin:10px 0 4px; font-weight:600; color:var(--text); }
+    input, textarea {
+      width:100%; padding:10px; border-radius:8px; border:1px solid var(--border); background:#fff; color:var(--text);
+    }
+    .btn { margin-top:12px; padding:10px 14px; border-radius:10px; border:1px solid var(--primary); background:#fff; color:var(--primary); font-weight:700; cursor:pointer; }
+    .btn:hover { background:#f0f7ff; }
+    .message { margin-top:16px; background:#fff; border:1px solid var(--border); border-radius:10px; padding:12px; }
+    .message .meta { font-size:13px; color:var(--muted); margin-bottom:6px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <h1>Виртуальный кабинет математики</h1>
+      <p>Средняя школа №7 г. Слонима</p>
+    </div>
+    <nav>
+      <a class="nav-link" href="index.html">Главная</a>
+      <a class="nav-link" href="news.html">Лента новостей</a>
+      <a class="nav-link" href="students.html">Учащимся</a>
+      <a class="nav-link" href="teacher.html">Учителю</a>
+      <a class="nav-link" href="consult.html">Хочу консультацию</a>
+      <a class="nav-link" href="guestbook.html">Гостевая книга</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Гостевая книга</h2>
+    <p style="color:#5b6b7a;">Оставьте отзыв или предложение. На статическом сайте записи не сохраняются автоматически — используйте email/Google Формы или платформу Blogger для комментариев.</p>
+
+    <!-- Простая форма отправки письма (можно заменить на Google Forms) -->
+    <section class="card">
+      <form action="mailto:example@school.by" method="post" enctype="text/plain">
+        <label for="author">Ваше имя</label>
+        <input id="author" name="author" type="text" required />
+
+        <label for="comment">Сообщение</label>
+        <textarea id="comment" name="comment" rows="6" required></textarea>
+
+        <button class="btn" type="submit">Отправить</button>
+      </form>
+    </section>
+
+    <!-- Пример отображения сообщений (статично) -->
+    <section>
+      <div class="message">
+        <div class="meta">Иван, 10 класс • 12.11.2025</div>
+        <div>Спасибо за «Задачу недели» — было интересно, жду новую!</div>
+      </div>
+      <div class="message">
+        <div class="meta">Мария, 7 класс • 08.11.2025</div>
+        <div>Добавьте, пожалуйста, больше задач по геометрии с рисунками.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer style="text-align:center; color:#5b6b7a; padding:14px 16px;">
+    © Средняя школа №7 г. Слонима • «Гостевая книга»
+  </footer>
+</body>
+</html>

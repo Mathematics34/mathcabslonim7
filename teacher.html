@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Учителю — Виртуальный кабинет математики</title>
+  <style>
+    :root { --bg:#f7fbff; --card:#fff; --primary:#1f5fbf; --primary-700:#184b95; --text:#1b2a3a; --muted:#5b6b7a; --border:#e1e8f0; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:var(--bg); color:var(--text); font-family: "Segoe UI", Roboto, Arial, sans-serif; }
+    header { background: linear-gradient(90deg, var(--primary), #0ea5e9); color:#fff; padding:14px 24px; position: sticky; top:0; z-index:10; }
+    .brand h1 { margin:0; font-size:18px; }
+    .brand p { margin:0; font-size:13px; opacity:0.9; }
+    nav { margin-top:10px; display:flex; flex-wrap:wrap; gap:8px; }
+    .nav-link { padding:8px 12px; border-radius:8px; border:1px solid rgba(255,255,255,0.25); background: rgba(255,255,255,0.18); color:#fff; font-weight:600; }
+    main { max-width:1024px; margin:24px auto; padding:0 16px; }
+    h2 { color:var(--primary-700); }
+    .grid { display:grid; grid-template-columns: 1fr 1fr; gap:16px; }
+    .card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:16px; }
+    .card h3 { margin:0 0 8px; color:var(--primary-700); }
+    ul { margin:8px 0 0; padding-left:20px; }
+    .note { color:var(--muted); font-size:14px; }
+    @media (max-width:800px) { .grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <h1>Виртуальный кабинет математики</h1>
+      <p>Средняя школа №7 г. Слонима</p>
+    </div>
+    <nav>
+      <a class="nav-link" href="index.html">Главная</a>
+      <a class="nav-link" href="news.html">Лента новостей</a>
+      <a class="nav-link" href="students.html">Учащимся</a>
+      <a class="nav-link" href="teacher.html">Учителю</a>
+      <a class="nav-link" href="consult.html">Хочу консультацию</a>
+      <a class="nav-link" href="guestbook.html">Гостевая книга</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Учителю</h2>
+    <p class="note">Материалы для планирования, проведения уроков и нормативной документации.</p>
+
+    <section class="grid">
+      <!-- Примерное и календарно-тематическое планирование -->
+      <article class="card" id="planning">
+        <h3>Примерное и календарно-тематическое планирование</h3>
+        <ul>
+          <li><a href="#">5 класс — КТП</a></li>
+          <li><a href="#">6 класс — КТП</a></li>
+          <li><a href="#">7 класс — КТП</a></li>
+          <li><a href="#">8 класс — КТП</a></li>
+          <li><a href="#">9 класс — КТП</a></li>
+          <li><a href="#">10 класс — КТП</a></li>
+          <li><a href="#">11 класс — КТП</a></li>
+        </ul>
+      </article>
+
+      <!-- Контрольно-измерительные материалы, план-конспекты -->
+      <article class="card" id="materials">
+        <h3>КИМы и план-конспекты уроков</h3>
+        <ul>
+          <li><a href="#">Контрольно-измерительные материалы</a></li>
+          <li><a href="#">План-конспекты уроков</a></li>
+          <li><a href="#">Факультативные занятия</a></li>
+        </ul>
+      </article>
+
+      <!-- Нормативные документы -->
+      <article class="card" id="norms">
+        <h3>Нормативные документы</h3>
+        <p class="note">Каждое инструктивно-методическое письмо — отдельной гиперссылкой.</p>
+        <ul>
+          <li><a href="#">Инструктивно-методическое письмо №1</a></li>
+          <li><a href="#">Инструктивно-методическое письмо №2</a></li>
+          <li><a href="#">Инструктивно-методическое письмо №3</a></li>
+          <li><a href="#">Приказы и положения</a></li>
+        </ul>
+      </article>
+
+      <!-- Методическая копилка -->
+      <article class="card" id="library">
+        <h3>Методическая копилка</h3>
+        <ul>
+          <li><a href="#">Дидактические материалы</a></li>
+          <li><a href="#">Примеры контрольных и самостоятельных</a></li>
+          <li><a href="#">Сценарии уроков и мероприятий</a></li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <footer style="text-align:center; color:#5b6b7a; padding:14px 16px;">
+    © Средняя школа №7 г. Слонима • «Учителю»
+  </footer>
+</body>
+</html>

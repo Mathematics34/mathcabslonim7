@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Учащимся — Виртуальный кабинет математики</title>
+  <style>
+    /* Общие стили (такие же, как на главной) для единообразия */
+    :root { --bg:#f7fbff; --card:#fff; --primary:#1f5fbf; --primary-700:#184b95; --text:#1b2a3a; --muted:#5b6b7a; --border:#e1e8f0; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:var(--bg); color:var(--text); font-family: "Segoe UI", Roboto, Arial, sans-serif; }
+    header { background: linear-gradient(90deg, var(--primary), #0ea5e9); color:#fff; padding:14px 24px; position: sticky; top:0; z-index:10; }
+    .brand h1 { margin:0; font-size:18px; }
+    .brand p { margin:0; font-size:13px; opacity:0.9; }
+    nav { margin-top:10px; display:flex; flex-wrap:wrap; gap:8px; }
+    .nav-link { padding:8px 12px; border-radius:8px; border:1px solid rgba(255,255,255,0.25); background: rgba(255,255,255,0.18); color:#fff; font-weight:600; }
+    main { max-width:1024px; margin:24px auto; padding:0 16px; }
+    h2 { color:var(--primary-700); }
+    .grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:16px; }
+    .card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:16px; }
+    .card h3 { margin:0 0 8px; color:var(--primary-700); }
+    ul { margin:8px 0 0; padding-left:20px; }
+    .tag { display:inline-block; margin:6px 6px 0 0; padding:6px 10px; border-radius:8px; border:1px solid var(--primary); color:var(--primary); background:#fff; font-weight:600; }
+    .note { color:var(--muted); font-size:14px; }
+    @media (max-width:900px) { .grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width:600px) { .grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <h1>Виртуальный кабинет математики</h1>
+      <p>Средняя школа №7 г. Слонима</p>
+    </div>
+    <nav>
+      <a class="nav-link" href="index.html">Главная</a>
+      <a class="nav-link" href="news.html">Лента новостей</a>
+      <a class="nav-link" href="students.html">Учащимся</a>
+      <a class="nav-link" href="teacher.html">Учителю</a>
+      <a class="nav-link" href="consult.html">Хочу консультацию</a>
+      <a class="nav-link" href="guestbook.html">Гостевая книга</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Учащимся</h2>
+    <p class="note">Выберите свой класс и нужную рубрику: самостоятельные работы, контрольные, опорные конспекты, электронные учебники.</p>
+
+    <!-- Сетка классов 5–11 -->
+    <section class="grid" aria-label="Классы">
+      <!-- Шаблон карточки класса: 5 класс -->
+      <article class="card">
+        <h3>5 класс</h3>
+        <ul>
+          <li><a href="#">Примерные самостоятельные работы</a></li>
+          <li><a href="#">Примеры контрольных работ</a></li>
+          <li><a href="#">Опорные конспекты</a></li>
+          <li><a href="#">Электронные учебники</a></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>6 класс</h3>
+        <ul>
+          <li><a href="#">Примерные самостоятельные работы</a></li>
+          <li><a href="#">Примеры контрольных работ</a></li>
+          <li><a href="#">Опорные конспекты</a></li>
+          <li><a href="#">Электронные учебники</a></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>7 класс</h3>
+        <ul>
+          <li><a href="#">Примерные самостоятельные работы</a></li>
+          <li><a href="#">Примеры контрольных работ</a></li>
+          <li><a href="#">Опорные конспекты</a></li>
+          <li><a href="#">Электронные учебники</a></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>8 класс</h3>
+        <ul>
+          <li><a href="#">Примерные самостоятельные работы</a></li>
+          <li><a href="#">Примеры контрольных работ</a></li>
+          <li><a href="#">Опорные конспекты</a></li>
+          <li><a href="#">Электронные учебники</a></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>9 класс</h3>
+        <ul>
+          <li><a href="#">Примерные самостоятельные работы</a></li>
+          <li><a href="#">Примеры контрольных работ</a></li>
+          <li><a href="#">Опорные конспекты</a></li>
+          <li><a href="#">Электронные учебники</a></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>10 класс</h3>
+        <ul>
+          <li><a href="#">Примерные самостоятельные работы</a></li>
+          <li><a href="#">Примеры контрольных работ</a></li>
+          <li><a href="#">Опорные конспекты</a></li>
+          <li><a href="#">Электронные учебники</a></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>11 класс</h3>
+        <ul>
+          <li><a href="#">Примерные самостоятельные работы</a></li>
+          <li><a href="#">Примеры контрольных работ</a></li>
+          <li><a href="#">Опорные конспекты</a></li>
+          <li><a href="#">Электронные учебники</a></li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Доп. тематические теги как якоря -->
+    <section style="margin-top:24px;">
+      <h2 id="olymp">Олимпиада</h2>
+      <p class="note">Сборники задач, разборы, стратегии решения.</p>
+      <span class="tag">Алгебра</span>
+      <span class="tag">Геометрия</span>
+      <span class="tag">Комбинаторика</span>
+      <span class="tag">Теория чисел</span>
+    </section>
+
+    <section style="margin-top:24px;">
+      <h2 id="ct_brt">Подготовка к ЦТ и БРТ</h2>
+      <p class="note">Типовые задания, тайм-менеджмент, анализ ошибок, чек-листы.</p>
+      <span class="tag">Тренировки</span>
+      <span class="tag">Симуляции</span>
+      <span class="tag">Разборы</span>
+    </section>
+
+    <section style="margin-top:24px;">
+      <h2 id="extras">Внеклассная работа</h2>
+      <p class="note">Кружки, проекты, задачники для развития и интереса.</p>
+      <span class="tag">Кружок</span>
+      <span class="tag">Проект</span>
+      <span class="tag">Игра</span>
+    </section>
+  </main>
+
+  <footer style="text-align:center; color:#5b6b7a; padding:14px 16px;">
+    © Средняя школа №7 г. Слонима • «Учащимся»
+  </footer>
+</body>
+</html>

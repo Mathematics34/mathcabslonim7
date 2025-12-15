@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Виртуальный кабинет математики — СШ №7 г. Слонима</title>
+  <!-- Базовый CSS: школьный стиль, синие/белые тона, адаптивность -->
+  <style>
+    :root {
+      --bg: #f7fbff;
+      --card: #ffffff;
+      --primary: #1f5fbf;
+      --primary-700: #184b95;
+      --text: #1b2a3a;
+      --muted: #5b6b7a;
+      --border: #e1e8f0;
+      --accent: #0ea5e9;
+      --success: #22c55e;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0; padding: 0; background: var(--bg); color: var(--text);
+      font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+    }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { color: var(--primary-700); }
+    header {
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      color: #fff;
+      padding: 14px 24px;
+      position: sticky; top: 0; z-index: 10;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+    }
+    .brand h1 {
+      font-size: 18px; margin: 0; font-weight: 700;
+    }
+    .brand p { margin: 0; font-size: 13px; opacity: 0.9; }
+    nav {
+      margin-top: 10px; display: flex; flex-wrap: wrap; gap: 8px;
+    }
+    .nav-link {
+      display: inline-block; padding: 8px 12px; border-radius: 8px;
+      background: rgba(255,255,255,0.18); border: 1px solid rgba(255,255,255,0.25);
+      color: #fff; font-weight: 600;
+    }
+    .nav-link:hover { background: rgba(255,255,255,0.26); }
+    main { max-width: 1024px; margin: 24px auto; padding: 0 16px; }
+    .hero {
+      background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+      padding: 24px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px;
+    }
+    .hero h2 { margin: 0 0 12px; font-size: 24px; color: var(--primary-700); }
+    .hero p { margin: 0 0 10px; color: var(--muted); }
+    .hero-cta { display: grid; gap: 10px; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 10px 14px; border-radius: 10px; border: 1px solid var(--primary);
+      background: #fff; color: var(--primary); font-weight: 700;
+    }
+    .btn:hover { background: #f0f7ff; }
+    .grid {
+      margin-top: 24px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+    }
+    .card {
+      background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px;
+    }
+    .card h3 { margin: 0 0 8px; font-size: 18px; color: var(--primary-700); }
+    .card p { margin: 0 0 12px; color: var(--muted); }
+    .link-btn {
+      display: inline-block; padding: 8px 12px; border-radius: 8px;
+      border: 1px solid var(--primary); color: var(--primary); background: #fff; font-weight: 600;
+    }
+    .link-btn:hover { background: #f0f7ff; }
+    footer {
+      margin: 32px 0 0; padding: 14px 16px; text-align: center; color: var(--muted);
+    }
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      nav { gap: 6px; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Шапка и навигация -->
+  <header>
+    <div class="brand">
+      <h1>Виртуальный кабинет математики</h1>
+      <p>Государственное учреждение образования «Средняя школа №7 г. Слонима»</p>
+    </div>
+    <nav aria-label="Основная навигация">
+      <a class="nav-link" href="index.html">Главная</a>
+      <a class="nav-link" href="news.html">Лента новостей</a>
+      <a class="nav-link" href="students.html">Учащимся</a>
+      <a class="nav-link" href="teacher.html">Учителю</a>
+      <a class="nav-link" href="consult.html">Хочу консультацию</a>
+      <a class="nav-link" href="guestbook.html">Гостевая книга</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Герой-блок с приветствием и быстрыми кнопками -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <h2 id="hero-title">Добро пожаловать в виртуальный кабинет математики</h2>
+        <p>Здесь собраны материалы для учащихся и учителей, подготовка к олимпиадам, ЦТ/БРТ, методическая копилка и «Задача недели».</p>
+        <p>Выберите нужный раздел — начинайте учиться и делиться достижениями.</p>
+      </div>
+      <div class="hero-cta">
+        <!-- Кнопки-ссылки на ключевые разделы -->
+        <a class="btn" href="students.html">Учащимся</a>
+        <a class="btn" href="teacher.html">Учителю</a>
+        <a class="btn" href="consult.html">Хочу консультацию</a>
+        <a class="btn" href="guestbook.html">Гостевая книга</a>
+        <a class="btn" href="news.html">Лента новостей</a>
+      </div>
+    </section>
+
+    <!-- Тематические карточки как на схеме -->
+    <section class="grid" aria-label="Основные рубрики">
+      <!-- Хочу победить в олимпиаде -->
+      <article class="card">
+        <h3>Хочу победить в олимпиаде</h3>
+        <p>Тренировочные задачи, разборы, тактика решения, сборники по темам.</p>
+        <!-- Внутренняя якорная ссылка (на students.html можно сделать отдельный раздел "Олимпиада") -->
+        <a class="link-btn" href="students.html#olymp">Перейти к материалам</a>
+      </article>
+
+      <!-- Подготовка к ЦТ и БРТ -->
+      <article class="card">
+        <h3>Подготовка к ЦТ и БРТ</h3>
+        <p>Стандартизированные задания, тайм-менеджмент, чек-листы по разделам.</p>
+        <a class="link-btn" href="students.html#ct_brt">Готовиться к тестам</a>
+      </article>
+
+      <!-- Внеклассная работа -->
+      <article class="card">
+        <h3>Внеклассная работа</h3>
+        <p>Кружки, проекты, математические игры и задачи для развития.</p>
+        <a class="link-btn" href="students.html#extras">Посмотреть кружки</a>
+      </article>
+
+      <!-- Методическая копилка -->
+      <article class="card">
+        <h3>Методическая копилка</h3>
+        <p>Конспекты уроков, дидактика, КИМы и примеры планирования.</p>
+        <a class="link-btn" href="teacher.html#library">Открыть копилку</a>
+      </article>
+
+      <!-- Наши достижения -->
+      <article class="card">
+        <h3>Наши достижения</h3>
+        <p>Победы, проекты, заметные работы учащихся и учителей.</p>
+        <a class="link-btn" href="news.html#achievements">Смотреть достижения</a>
+      </article>
+
+      <!-- Задача недели -->
+      <article class="card">
+        <h3>Задача недели</h3>
+        <p>Одна интересная задача каждую неделю с обсуждением решений.</p>
+        <a class="link-btn" href="news.html#problem-of-week">Перейти к задаче</a>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    © Средняя школа №7 г. Слонима • Виртуальный кабинет математики
+  </footer>
+</body>
+</html>

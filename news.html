@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Лента новостей — Виртуальный кабинет математики</title>
+  <style>
+    :root { --bg:#f7fbff; --card:#fff; --primary:#1f5fbf; --primary-700:#184b95; --text:#1b2a3a; --muted:#5b6b7a; --border:#e1e8f0; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:var(--bg); color:var(--text); font-family: "Segoe UI", Roboto, Arial, sans-serif; }
+    header { background: linear-gradient(90deg, var(--primary), #0ea5e9); color:#fff; padding:14px 24px; position: sticky; top:0; z-index:10; }
+    .brand h1 { margin:0; font-size:18px; }
+    .brand p { margin:0; font-size:13px; opacity:0.9; }
+    nav { margin-top:10px; display:flex; flex-wrap:wrap; gap:8px; }
+    .nav-link { padding:8px 12px; border-radius:8px; border:1px solid rgba(255,255,255,0.25); background: rgba(255,255,255,0.18); color:#fff; font-weight:600; }
+    main { max-width:900px; margin:24px auto; padding:0 16px; }
+    h2 { color:var(--primary-700); }
+    .news-item {
+      background:var(--card); border:1px solid var(--border); border-radius:12px; padding:16px; margin-bottom:14px;
+    }
+    .news-item h3 { margin:0 0 4px; color:var(--primary-700); }
+    .meta { color:var(--muted); font-size:13px; margin-bottom:8px; }
+    .tag { display:inline-block; margin:6px 6px 0 0; padding:6px 10px; border-radius:8px; border:1px solid var(--primary); color:var(--primary); background:#fff; font-weight:600; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <h1>Виртуальный кабинет математики</h1>
+      <p>Средняя школа №7 г. Слонима</p>
+    </div>
+    <nav>
+      <a class="nav-link" href="index.html">Главная</a>
+      <a class="nav-link" href="news.html">Лента новостей</a>
+      <a class="nav-link" href="students.html">Учащимся</a>
+      <a class="nav-link" href="teacher.html">Учителю</a>
+      <a class="nav-link" href="consult.html">Хочу консультацию</a>
+      <a class="nav-link" href="guestbook.html">Гостевая книга</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Лента новостей</h2>
+
+    <!-- Задача недели якорь -->
+    <section id="problem-of-week" class="news-item">
+      <h3>Задача недели: неравенство с параметром</h3>
+      <div class="meta">15.12.2025 • Категория: Задача недели</div>
+      <p>Докажите, что для всех действительных a выражение f(x)=... имеет минимум при x=... . Решения принимаются до пятницы.</p>
+      <a href="#" class="tag">Алгебра</a>
+      <a href="#" class="tag">Параметры</a>
+    </section>
+
+    <!-- Наши достижения якорь -->
+    <section id="achievements" class="news-item">
+      <h3>Наши достижения: районная олимпиада</h3>
+      <div class="meta">12.12.2025 • Категория: Достижения</div>
+      <p>Поздравляем призёров олимпиады по математике! Опубликован разбор задач и комментарии жюри.</p>
+      <a href="#" class="tag">Олимпиада</a>
+      <a href="#" class="tag">Разбор задач</a>
+    </section>
+
+    <!-- Общая новость -->
+    <section class="news-item">
+      <h3>Обновления раздела «Учителю»</h3>
+      <div class="meta">10.12.2025 • Категория: Методическая копилка</div>
+      <p>Добавлены новые КИМы и план-конспекты, а также разъяснения по нормативным документам.</p>
+      <a href="#" class="tag">КИМы</a>
+      <a href="#" class="tag">Нормативка</a>
+    </section>
+  </main>
+
+  <footer style="text-align:center; color:#5b6b7a; padding:14px 16px;">
+    © Средняя школа №7 г. Слонима • «Лента новостей»
+  </footer>
+</body>
+</html>
